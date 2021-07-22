@@ -1,7 +1,7 @@
 {
-  "name": "apirest",
+  "name": "utfood_apirest",
   "version": "1.0.0",
-  "description": "Api rest para administrar informacion de la aplicacion de comida",
+  "description": "Api rest para administrar informacion de la aplicacion de comida UTFood",
   "main": "Main.js",
   "scripts": {
     "test": "dev",
@@ -24,7 +24,9 @@
     "dotenv": "^10.0.0",
     "hapi-swagger": "^14.2.0",
     "hapi-swaggered": "^3.0.2",
-    "joi": "^17.4.0"
+    "joi": "^17.4.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.7",

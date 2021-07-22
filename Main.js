@@ -7,9 +7,10 @@ const Vision = require('@hapi/vision')
 const HapiSwagger = require('hapi-swagger')
 const Pack = require('./package')
 
+
 //Declaramos nuestro servidor
 const server = Hapi.server({
-    port: process.env.port || 3000,
+    port: process.env.port,
     host: '0.0.0.0'
 })
 

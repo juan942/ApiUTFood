@@ -1,7 +1,10 @@
 'use strict'
 
+// Agragamos la Lib Joi para validar la Data que recibimos desde el Front
 const Joi = require('joi')
-const negocios = require('./controllers/negocio') // importamos nuestro controllador
+
+// Aqui importaremos todos los controllers a usar en cada Handler
+const categoria_Menu = require('./controllers/categoriaMenuController') // importamos nuestro controllador
 
 module.exports = [
     {
@@ -13,12 +16,12 @@ module.exports = [
     },
     {
         method: 'GET',
-        path: '/negocios',
-        handler: negocios.negocios,
+        path: '/ctgmenus',
+        handler: categoria_Menu.getCategorias,
         options: {
-            description: 'Listar todos los Negocios',
-            notes: 'Lista todos los negocios registrados en la BD',
-            tags: ['api','negocios','All negocios'] // ADD THIS TAG
+            description: 'Retornar todas las categorias de Menus disponibles',
+            notes: 'Lista todas las categorias de Menus registrados en la BD',
+            tags: ['api','categorias','menu'] // ADD THIS TAG
             /*validate: {
                 payload: Joi.object({
                     post: Joi.string().min(1).max(140)
